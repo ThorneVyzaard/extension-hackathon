@@ -1,0 +1,28 @@
+﻿{
+  "manifest_version": 3,
+  "name": "FakeLens - Détecteur d'images IA",
+  "version": "1.0.0",
+  "description": "Détectez instantanément les images générées par IA sur le web grâce au Deep Learning local et Grad-CAM.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
