@@ -1,0 +1,6 @@
+-r requirements.txt
+pytest
+httpx
+scikit-learn
+onnx
+onnxruntime

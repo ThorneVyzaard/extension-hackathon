@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Données et checkpoints d'entraînement (trop lourds pour GitHub : limite 100 Mo/fichier)
+data/
+datasets/
+*.pth
+*.ckpt
+checkpoints/
+
+# Résultats d'évaluation locaux (copiez les chiffres utiles dans le README)
+backend/results/
+
+# Divers
+node_modules/
+.DS_Store

@@ -201,6 +201,8 @@
     <span class="badge-hackathon">ByteForge v2</span>
   </div>
 
+  <div id="backend-status" style="font-size: 11px; margin-bottom: 12px; color: var(--text-muted);">● Vérification du backend…</div>
+
   <div class="card scan-section">
     <button class="btn" id="scan-page-btn">
       <i class="fa-solid fa-wand-magic-sparkles"></i> Analyser les images de la page
@@ -209,11 +211,11 @@
     <div id="result-container" class="result-box">
       <div class="result-header">
         <span id="res-title" style="font-size: 12px; font-weight: 600;">Dernière analyse</span>
-        <span id="res-verdict" class="verdict-tag verdict-fake">Généré (94%)</span>
+        <span id="res-verdict" class="verdict-tag verdict-uncertain">—</span>
       </div>
-      <div style="font-size: 11px; color: var(--text-muted);" id="res-details">Modèle ONNX Local (Int8)</div>
+      <div style="font-size: 11px; color: var(--text-muted);" id="res-details">Modèle PyTorch exécuté par le backend local</div>
       <div class="score-bar">
-        <div id="res-bar-fill" class="score-fill" style="width: 94%; background: var(--danger);"></div>
+        <div id="res-bar-fill" class="score-fill" style="width: 0%;"></div>
       </div>
     </div>
   </div>
@@ -229,7 +231,8 @@
   </div>
 
   <div class="footer">
-    ByteForge Hackathon • Mode Local-First & Confidentialité garantie
+    Résultat probabiliste, pas une preuve • Clic droit sur une image pour la heatmap Grad-CAM<br>
+    ByteForge Hackathon • Local uniquement : aucune image n'est conservée
   </div>
 
   <script src="popup.js"></script>
